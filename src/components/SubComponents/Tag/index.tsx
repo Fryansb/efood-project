@@ -10,7 +10,7 @@ export const Tag = ({ title, link }: Props) => {
     <>
       <div className="TagItem">
         <TagItem>
-          <Link to={`/${link}`}>{title}</Link>
+          <Link to={link || '#'}>{title}</Link>
         </TagItem>
       </div>
     </>

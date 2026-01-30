@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# efood-project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O **efood-project** é uma aplicação web desenvolvida em React para simular um sistema de pedidos online de restaurantes, inspirado em plataformas de delivery. O objetivo é proporcionar uma experiência completa de navegação, escolha de restaurantes, visualização de cardápios, adição de produtos ao carrinho e finalização de pedidos.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Listagem de restaurantes disponíveis com informações detalhadas
+- Visualização do cardápio de cada restaurante
+- Adição e remoção de itens no carrinho de compras
+- Cálculo automático do valor total do pedido
+- Formulário para finalização do pedido com validação de dados
+- Layout responsivo e moderno, adaptado para dispositivos móveis e desktop
 
-## React Compiler
+## Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Styled-components](https://styled-components.com/) para estilização
+- [Vite](https://vitejs.dev/) para build e desenvolvimento
+- [ESLint](https://eslint.org/) e [Prettier](https://prettier.io/) para padronização de código
 
-## Expanding the ESLint configuration
+## Estrutura do Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+efood-project/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── store/
+│   ├── styles/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── Routes.tsx
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **components/**: Componentes reutilizáveis da interface
+- **pages/**: Páginas principais da aplicação (Home, Restaurante, Checkout, etc)
+- **store/**: Gerenciamento de estado global (Redux ou Context API)
+- **assets/**: Imagens e outros arquivos estáticos
+- **styles/**: Estilos globais e temas
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Como Executar
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone o repositório:
+   ```
+   git clone https://github.com/Fryansb/efood-project.git
+   ```
+2. Instale as dependências:
+   ```
+   npm install
+   ```
+3. Inicie o servidor de desenvolvimento:
+   ```
+   npm run dev
+   ```
+4. Acesse em [http://localhost:5173](http://localhost:5173)
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+---
+
+Desenvolvido por Fryansb.
